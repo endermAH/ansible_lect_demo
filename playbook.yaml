@@ -4,6 +4,7 @@
   gather_facts: no
   tasks:
     - name: "Install 3parties with apt"
+      become: true
       apt:
         state: present
         name: "{{ item }}"
