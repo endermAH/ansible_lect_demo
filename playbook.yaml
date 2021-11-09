@@ -1,6 +1,6 @@
 ---
 - name: "Prepare thirdparties"
-  hosts: all
+  hosts: localhost
   gather_facts: no
   tasks:
     - name: "Install 3parties with apt"
