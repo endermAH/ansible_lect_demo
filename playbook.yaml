@@ -3,7 +3,6 @@
   hosts: localhost
   gather_facts: no
   become: true
-  become_password: test
   tasks:
     - name: "Install 3parties with apt"
       apt:
