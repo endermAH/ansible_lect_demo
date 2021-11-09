@@ -5,6 +5,8 @@
   tasks:
     - name: "Install 3parties with apt"
       become: true
+      become_method: sudo
+      become_password: test
       apt:
         state: present
         name: "{{ item }}"
