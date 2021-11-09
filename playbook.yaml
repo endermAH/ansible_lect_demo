@@ -2,10 +2,10 @@
 - name: "Prepare thirdparties"
   hosts: localhost
   gather_facts: no
+  become_user: root
+  become_password: test
   tasks:
     - name: "Install 3parties with apt"
-      become_user: root
-      become_password: test
       apt:
         state: present
         name: "{{ item }}"
