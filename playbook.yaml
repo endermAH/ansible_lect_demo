@@ -1,7 +1,15 @@
 ---
-- name: "Some play"
+- name: "Prepare thirdparties"
   hosts: all
   gather_facts: no
   tasks:
-    - debug:
-        msg: "Test message"
+    - name: "Install 3parties with apt"
+      apt:
+        state: present
+        name: "{{ item }}"
+      loop:
+        - apache2
+        - mysql-server
+        - php
+        - libapache2-mod-php
+        - php-mysql
