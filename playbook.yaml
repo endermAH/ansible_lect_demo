@@ -4,8 +4,7 @@
   gather_facts: no
   tasks:
     - name: "Install 3parties with apt"
-      become: true
-      become_method: sudo
+      become_user: root
       become_password: test
       apt:
         state: present
