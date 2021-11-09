@@ -3,6 +3,8 @@
   hosts: localhost
   gather_facts: no
   become: true
+  vars:
+    ansible_sudo_pass: test
   tasks:
     - name: "Install 3parties with apt"
       apt:
