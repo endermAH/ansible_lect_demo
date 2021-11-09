@@ -1,9 +1,9 @@
 REPO_URL = "https://github.com/endermAH/ansible_lect_demo.git"
-PLAYBOOK_NAME = ""
+PLAYBOOK_NAME = "ansible_lect_demo/playbook.yaml"
 
 node {
   stage("Clean workspace") {
-    cleanWS()
+    cleanWs()
   }
   stage("Clone repo") {
     git REPO_URL
